@@ -237,7 +237,6 @@
             font-size: 1rem;
             background: #fff;
             transition: border-color 0.3s;
-            /* 確保輸入框為空，不顯示預填 */
         }
         input:focus, select:focus {
             outline: none;
@@ -305,7 +304,7 @@
     <section id="details">
         <h2 class="section-title">Details & Location</h2>
         <div class="v-card">
-            <p><strong>Time：</strong><br><span class="no-wrap">2026年12月31日 (六) 18:00 入席</span></p> <!-- 替換您的日期 -->
+            <p><strong>Time：</strong><br><span class="no-wrap">2026年9月12日 (六) 18:30 入席</span></p>
             <p><strong>Venue：</strong><br><span class="no-wrap">某某國際大飯店 3F 璀璨廳</span></p> <!-- 替換您的地點 -->
             
             <br>
@@ -334,7 +333,7 @@
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){ alert('感謝您的回覆！我們期待與您相見。'); location.reload(); }"></iframe>
             
             <!-- 【重要】請將下方 action="在此貼上您的 Google 表單 POST 連結" 替換掉 -->
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSc2hGOl5zypC8GjNfsYZBVMH-AEV5k7mJBeE--eqELw3xaC_w/viewform" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+            <form action="YOUR_GOOGLE_FORM_ACTION_URL_HERE" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
                 
                 <div class="form-group">
                     <!-- 雙語標籤 -->
@@ -378,8 +377,8 @@
         var submitted = false;
 
         // --- 倒數計時器邏輯 ---
-        // 【重要】請將下方的時間修改為您實際婚禮的開始時間
-        const weddingDate = new Date("2026-12-31T18:00:00").getTime();
+        // 倒數至 2026年9月12日 18:30
+        const weddingDate = new Date("2026-09-12T18:30:00").getTime();
 
         const timer = setInterval(function() {
             const now = new Date().getTime();
